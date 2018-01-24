@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -219,11 +220,12 @@ public class LocatrFragment extends SupportMapFragment
     public boolean onMarkerClick(Marker marker) {
         if (mPhotos != null) {
             Object tag = marker.getTag();
-            if (tag != null) {
+            FragmentManager fm = getFragmentManager();
+            if (tag != null && fm != null) {
                 Photo photo = mPhotos.get((int) tag);
                 PhotoFragment dialog = PhotoFragment
                         .newInstance(photo.getPhotoUrl(), photo.getPhotoPageUri());
-                dialog.show(getFragmentManager(), DIALOG_PHOTO_PAGE);
+                dialog.show(fm, DIALOG_PHOTO_PAGE);
             }
         }
         return false;
