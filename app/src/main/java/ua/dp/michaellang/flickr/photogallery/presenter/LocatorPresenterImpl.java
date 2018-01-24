@@ -13,7 +13,7 @@ import ua.dp.michaellang.flickr.photogallery.entity.FlickrResponse;
 import ua.dp.michaellang.flickr.photogallery.entity.Photo;
 import ua.dp.michaellang.flickr.photogallery.network.FlickrMethods;
 import ua.dp.michaellang.flickr.photogallery.utils.SPUtil;
-import ua.dp.michaellang.flickr.photogallery.view.LocatrView;
+import ua.dp.michaellang.flickr.photogallery.view.LocatorView;
 
 import java.util.List;
 
@@ -22,14 +22,14 @@ import java.util.List;
  *
  * @author Michael Lang
  */
-public class LocatrPresenterImpl implements LocatrPresenter {
+public class LocatorPresenterImpl implements LocatorPresenter {
     private FusedLocationProviderClient mClient;
-    private LocatrView mView;
+    private LocatorView mView;
     private Context mContext;
     private Subscriber<Response<FlickrResponse>> subscriber;
     private LocationCallback mLocationCallback;
 
-    public LocatrPresenterImpl(Context context, LocatrView view) {
+    public LocatorPresenterImpl(Context context, LocatorView view) {
         mContext = context;
         mView = view;
 

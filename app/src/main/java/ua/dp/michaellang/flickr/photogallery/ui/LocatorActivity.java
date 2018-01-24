@@ -12,7 +12,7 @@ import com.google.android.gms.common.GoogleApiAvailability;
  *
  * @author Michael Lang
  */
-public class LocatrActivity extends SingleFragmentActivity {
+public class LocatorActivity extends SingleFragmentActivity {
     private static final int REQUEST_ERROR = 0;
 
     @Override
@@ -34,7 +34,7 @@ public class LocatrActivity extends SingleFragmentActivity {
     }
 
     public static Intent newIntent(Context context) {
-        return new Intent(context, LocatrActivity.class);
+        return new Intent(context, LocatorActivity.class);
     }
 
     public static void start(Context context) {
@@ -44,6 +44,6 @@ public class LocatrActivity extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
-        return LocatrFragment.newInstance();
+        return LocatorFragment.newInstance();
     }
 }

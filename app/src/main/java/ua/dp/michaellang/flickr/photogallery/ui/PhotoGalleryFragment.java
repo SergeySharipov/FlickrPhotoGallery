@@ -228,7 +228,7 @@ public class PhotoGalleryFragment extends Fragment
                 loadNext();
                 return true;
             case R.id.menu_map:
-                LocatrActivity.start(getContext());
+                LocatorActivity.start(getContext());
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

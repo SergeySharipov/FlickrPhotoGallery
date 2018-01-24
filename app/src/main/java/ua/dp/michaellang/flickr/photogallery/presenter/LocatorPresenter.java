@@ -5,6 +5,6 @@ package ua.dp.michaellang.flickr.photogallery.presenter;
  *
  * @author Michael Lang
  */
-public interface LocatrPresenter extends BasePresenter{
+public interface LocatorPresenter extends BasePresenter{
     void search();
 }

@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author Michael Lang
  */
-public interface LocatrView {
+public interface LocatorView {
     void onError(String mes);
     void onLocationDetected(Location location);
     void onPhotosLoaded(List<Photo> photos);
