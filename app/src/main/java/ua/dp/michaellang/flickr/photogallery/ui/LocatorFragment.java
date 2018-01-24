@@ -13,9 +13,9 @@ import com.google.android.gms.maps.model.*;
 import timber.log.Timber;
 import ua.dp.michaellang.flickr.photogallery.R;
 import ua.dp.michaellang.flickr.photogallery.entity.Photo;
-import ua.dp.michaellang.flickr.photogallery.presenter.LocatrPresenter;
-import ua.dp.michaellang.flickr.photogallery.presenter.LocatrPresenterImpl;
-import ua.dp.michaellang.flickr.photogallery.view.LocatrView;
+import ua.dp.michaellang.flickr.photogallery.presenter.LocatorPresenter;
+import ua.dp.michaellang.flickr.photogallery.presenter.LocatorPresenterImpl;
+import ua.dp.michaellang.flickr.photogallery.view.LocatorView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,8 +27,8 @@ import static ua.dp.michaellang.flickr.photogallery.Constants.MAP_POSITION_OFFSE
  *
  * @author Michael Lang
  */
-public class LocatrFragment extends SupportMapFragment
-        implements LocatrView, GoogleMap.OnMarkerClickListener {
+public class LocatorFragment extends SupportMapFragment
+        implements LocatorView, GoogleMap.OnMarkerClickListener {
     private static final String DIALOG_PHOTO_PAGE = "DIALOG_PHOTO_PAGE";
 
     private static final String KEY_CURRENT_LOCATION = "CURRENT_LOCATION";
@@ -36,7 +36,7 @@ public class LocatrFragment extends SupportMapFragment
 
     private GoogleMap mMap;
 
-    private LocatrPresenter mPresenter;
+    private LocatorPresenter mPresenter;
     private ProgressDialog mProgressDialog;
 
     private LatLng mCurrentLocation;
@@ -55,14 +55,14 @@ public class LocatrFragment extends SupportMapFragment
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 mMap = googleMap;
-                mMap.setOnMarkerClickListener(LocatrFragment.this);
+                mMap.setOnMarkerClickListener(LocatorFragment.this);
 
                 addCurrentLocationCircle();
                 updateMarkers();
             }
         });
 
-        mPresenter = new LocatrPresenterImpl(getContext(), this);
+        mPresenter = new LocatorPresenterImpl(getContext(), this);
     }
 
     private void loadSavedState(Bundle savedInstanceState) {
@@ -193,7 +193,7 @@ public class LocatrFragment extends SupportMapFragment
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.fragment_locatr, menu);
+        inflater.inflate(R.menu.fragment_locator, menu);
     }
 
     @Override
@@ -212,8 +212,8 @@ public class LocatrFragment extends SupportMapFragment
         }
     }
 
-    public static LocatrFragment newInstance() {
-        return new LocatrFragment();
+    public static LocatorFragment newInstance() {
+        return new LocatorFragment();
     }
 
     @Override
