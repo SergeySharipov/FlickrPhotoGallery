@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FlickrPhotoGallery.iml" filepath="$PROJECT_DIR$/FlickrPhotoGallery.iml" />
+      <module fileurl="file://C:\Users\Sergey-PC\Documents\Misha\FlickrPhotoGallery\FlickrPhotoGallery.iml" filepath="C:\Users\Sergey-PC\Documents\Misha\FlickrPhotoGallery\FlickrPhotoGallery.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Sergey-PC\Documents\Misha\FlickrPhotoGallery\app\app.iml" filepath="C:\Users\Sergey-PC\Documents\Misha\FlickrPhotoGallery\app\app.iml" />
     </modules>
   </component>
 </project>
